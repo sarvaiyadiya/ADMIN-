@@ -40,6 +40,26 @@ export const mockUsers: User[] = [
     status: 'active',
     itemsListed: 8,
     swapsCompleted: 5
+  },
+  {
+    id: '4',
+    name: 'Ayush Mittal',
+    email: 'ayush.mittal@email.com',
+    avatar: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?w=150',
+    joinDate: '2024-04-05',
+    status: 'active',
+    itemsListed: 8,
+    swapsCompleted: 5
+  },
+  {
+    id: '4',
+    name: 'Ayush Mittal',
+    email: 'ayush.mittal@email.com',
+    avatar: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?w=150',
+    joinDate: '2024-04-05',
+    status: 'active',
+    itemsListed: 8,
+    swapsCompleted: 5
   }
 ];
 
