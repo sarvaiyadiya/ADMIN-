@@ -34,10 +34,10 @@ export const ItemsProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     time: string;
     itemId?: string;
   }>>([
-    { id: '1', user: 'Sarah Johnson', action: 'Listed a new item', time: '2 minutes ago', itemId: '1' },
-    { id: '2', user: 'Mike Chen', action: 'Completed a swap', time: '5 minutes ago' },
-    { id: '3', user: 'Emma Wilson', action: 'Updated profile', time: '1 hour ago' },
-    { id: '4', user: 'John Doe', action: 'Joined the platform', time: '2 hours ago' }
+    { id: '1', user: 'Diya Sarvaiya', action: 'Listed a new item', time: '2 minutes ago', itemId: '1' },
+    { id: '2', user: 'Harshil Maru', action: 'Completed a swap', time: '5 minutes ago' },
+    { id: '3', user: 'Mahek Maru', action: 'Updated profile', time: '1 hour ago' },
+    { id: '4', user: 'Ayush Mittal', action: 'Joined the platform', time: '2 hours ago' }
   ]);
 
   const updateItemStatus = (id: string, status: 'pending' | 'approved' | 'rejected') => {
