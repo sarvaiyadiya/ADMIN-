@@ -45,92 +45,70 @@ export const mockUsers: User[] = [
     id: '5',
     name: 'Aryan Singh',
     email: 'aryan.singh@email.com',
-    avatar: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?w=150',
-    joinDate: '2024-04-05',
+    avatar: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?w=150',
+    joinDate: '2024-05-10',
     status: 'active',
-    itemsListed: 8,
-    swapsCompleted: 5
+    itemsListed: 5,
+    swapsCompleted: 2
   },
   {
-    id: '4',
-    name: 'Ayush Mittal',
-    email: 'ayush.mittal@email.com',
-    avatar: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?w=150',
-    joinDate: '2024-04-05',
+    id: '6',
+    name: 'Priya Patel',
+    email: 'priya.patel@email.com',
+    avatar: 'https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?w=150',
+    joinDate: '2024-06-12',
     status: 'active',
-    itemsListed: 8,
-    swapsCompleted: 5
+    itemsListed: 7,
+    swapsCompleted: 3
+  },
+  {
+    id: '7',
+    name: 'Riya Shah',
+    email: 'riya.shah@email.com',
+    avatar: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?w=150',
+    joinDate: '2024-07-18',
+    status: 'active',
+    itemsListed: 4,
+    swapsCompleted: 2
+  },
+  {
+    id: '8',
+    name: 'Karan Mehta',
+    email: 'karan.mehta@email.com',
+    avatar: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?w=150',
+    joinDate: '2024-08-22',
+    status: 'active',
+    itemsListed: 6,
+    swapsCompleted: 4
+  },
+  {
+    id: '9',
+    name: 'Sneha Desai',
+    email: 'sneha.desai@email.com',
+    avatar: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?w=150',
+    joinDate: '2024-09-30',
+    status: 'active',
+    itemsListed: 5,
+    swapsCompleted: 1
   }
 ];
 
 export const mockItems: Item[] = [
   {
     id: '1',
-    title: 'Vintage Denim Jacket',
-    description: 'Classic blue denim jacket in excellent condition. Perfect for casual wear.',
-    category: 'Jackets',
-    size: 'M',
-    condition: 'Excellent',
-    images: ['https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?w=300'],
-    user: mockUsers[0], // Diya Sarvaiya
-    status: 'pending',
-    dateSubmitted: '2024-12-15',
-    tags: ['vintage', 'denim', 'casual']
-  },
-  {
-    id: '2',
-    title: 'Designer Silk Blouse',
-    description: 'Elegant silk blouse from a premium brand. Barely worn.',
-    category: 'Tops',
-    size: 'S',
-    condition: 'Like New',
-    images: ['https://images.pexels.com/photos/1036622/pexels-photo-1036622.jpeg?w=300'],
-    user: mockUsers[1], // Harshil Maru
-    status: 'approved',
-    dateSubmitted: '2024-12-14',
-    tags: ['designer', 'silk', 'formal']
-  },
-  {
-    id: '3',
-    title: 'Leather Boots',
-    description: 'High-quality leather boots with minimal wear.',
-    category: 'Shoes',
-    size: '8',
-    condition: 'Good',
-    images: ['https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg?w=300'],
-    user: mockUsers[2], // Mahek Maru
-    status: 'pending',
-    dateSubmitted: '2024-12-13',
-    tags: ['leather', 'boots', 'winter']
-  },
-  {
-    id: '4',
-    title: 'Casual Sneakers',
-    description: 'Comfortable and stylish sneakers perfect for everyday wear.',
-    category: 'Shoes',
-    size: '9',
-    condition: 'Like New',
-    images: ['https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?w=300'],
-    user: mockUsers[3], // Ayush Mittal
-    status: 'approved',
-    dateSubmitted: '2024-12-12',
-    tags: ['casual', 'sneakers', 'comfortable']
-  },
-  {
-    id: '5',
     title: 'Classic Denim Jacket',
     description: 'Timeless denim jacket with a perfect fit. Great for layering in any season.',
     category: 'Jackets',
     size: 'L',
     condition: 'Excellent',
     images: ['https://images.pexels.com/photos/1082529/pexels-photo-1082529.jpeg?w=300'],
-    user: mockUsers[5], // Diya Sarvaiya
+    user: mockUsers[0], // Diya Sarvaiya
     status: 'approved',
     dateSubmitted: '2024-12-11',
     tags: ['denim', 'classic', 'versatile']
   },
   {
-    id: '6',
+    id: '2',
     title: 'Embroidered Ethnic Kurta',
     description: 'Beautiful hand-embroidered kurta with traditional motifs. Perfect for festive occasions.',
     category: 'Ethnic Wear',
@@ -143,7 +121,7 @@ export const mockItems: Item[] = [
     tags: ['ethnic', 'embroidered', 'festive']
   },
   {
-    id: '7',
+    id: '3',
     title: 'Graphic Print T-Shirt',
     description: 'Comfortable cotton t-shirt with a unique graphic design. Perfect for casual outings.',
     category: 'Tops',
@@ -156,7 +134,7 @@ export const mockItems: Item[] = [
     tags: ['casual', 'graphic', 'cotton']
   },
   {
-    id: '8',
+    id: '4',
     title: 'Designer Silk Saree',
     description: 'Elegant silk saree with intricate zari work. Ideal for special occasions and celebrations.',
     category: 'Ethnic Wear',
@@ -169,66 +147,66 @@ export const mockItems: Item[] = [
     tags: ['silk', 'designer', 'traditional']
   },
   {
-    id: '9',
+    id: '5',
     title: 'Warm Winter Hoodie',
     description: 'Cozy fleece hoodie perfect for cold weather. Features a comfortable fit and warm lining.',
     category: 'Outerwear',
     size: 'L',
     condition: 'Good',
     images: ['https://images.pexels.com/photos/6311478/pexels-photo-6311478.jpeg?w=300'],
-    user: mockUsers[0], // Diya Sarvaiya
+    user: mockUsers[4], // Aryan Singh
     status: 'pending',
     dateSubmitted: '2024-12-07',
     tags: ['winter', 'hoodie', 'warm']
   },
   {
-    id: '10',
+    id: '6',
     title: 'Crisp Formal Shirt',
     description: 'Professional cotton formal shirt with a modern cut. Perfect for office wear and formal events.',
     category: 'Formal Wear',
     size: 'M',
     condition: 'Like New',
     images: ['https://images.pexels.com/photos/1036622/pexels-photo-1036622.jpeg?w=300'],
-    user: mockUsers[1], // Harshil Maru
+    user: mockUsers[5], // Priya Patel
     status: 'approved',
     dateSubmitted: '2024-12-06',
     tags: ['formal', 'professional', 'cotton']
   },
   {
-    id: '11',
+    id: '7',
     title: 'Floral Skater Dress',
     description: 'Adorable skater dress with a beautiful floral pattern. Perfect for summer days and casual events.',
     category: 'Dresses',
     size: 'S',
     condition: 'Excellent',
     images: ['https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?w=300'],
-    user: mockUsers[2], // Mahek Maru
+    user: mockUsers[6], // Riya Shah
     status: 'approved',
     dateSubmitted: '2024-12-05',
     tags: ['dress', 'floral', 'summer']
   },
   {
-    id: '12',
+    id: '8',
     title: 'Soft Woolen Scarf',
     description: 'Luxurious woolen scarf with a soft texture. Provides excellent warmth and style during winter.',
     category: 'Accessories',
     size: 'One Size',
     condition: 'Like New',
     images: ['https://images.pexels.com/photos/6311478/pexels-photo-6311478.jpeg?w=300'],
-    user: mockUsers[3], // Ayush Mittal
+    user: mockUsers[7], // Karan Mehta
     status: 'pending',
     dateSubmitted: '2024-12-04',
     tags: ['wool', 'scarf', 'winter']
   },
   {
-    id: '13',
+    id: '9',
     title: 'Comfortable Cargo Pants',
     description: 'Practical cargo pants with multiple pockets. Made from durable fabric, perfect for outdoor activities.',
     category: 'Bottoms',
     size: '32',
     condition: 'Good',
     images: ['https://images.pexels.com/photos/1082529/pexels-photo-1082529.jpeg?w=300'],
-    user: mockUsers[0], // Diya Sarvaiya
+    user: mockUsers[8], // Sneha Desai
     status: 'approved',
     dateSubmitted: '2024-12-03',
     tags: ['cargo', 'practical', 'outdoor']
