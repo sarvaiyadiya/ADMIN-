@@ -1,8 +1,13 @@
 import React from 'react';
 import { Users, Package, Clock, TrendingUp, Activity } from 'lucide-react';
 import { mockStats } from '../data/mockData';
+import { useItems } from '../contexts/ItemsContext';
 
 const Dashboard: React.FC = () => {
+  const { items, getRecentActivity } = useItems();
+  
+  const pendingItemsCount = items.filter(item => item.status === 'pending').length;
+  
   const stats = [
     {
       title: 'Total Users',
@@ -13,14 +18,14 @@ const Dashboard: React.FC = () => {
     },
     {
       title: 'Total Items',
-      value: mockStats.totalItems.toLocaleString(),
+      value: items.length.toString(),
       icon: Package,
       change: '+8.2%',
       changeType: 'positive'
     },
     {
       title: 'Pending Items',
-      value: mockStats.pendingItems.toString(),
+      value: pendingItemsCount.toString(),
       icon: Clock,
       change: '-3.1%',
       changeType: 'negative'
@@ -71,19 +76,17 @@ const Dashboard: React.FC = () => {
         <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
           <h2 className="text-xl font-semibold text-[#292929] dark:text-white mb-4">Recent Activity</h2>
           <div className="space-y-4">
-            {[
-              { user: 'Sarah Johnson', action: 'Listed a new item', time: '2 minutes ago' },
-              { user: 'Mike Chen', action: 'Completed a swap', time: '5 minutes ago' },
-              { user: 'Emma Wilson', action: 'Updated profile', time: '1 hour ago' },
-              { user: 'John Doe', action: 'Joined the platform', time: '2 hours ago' }
-            ].map((activity, index) => (
-              <div key={index} className="flex items-center space-x-3">
+            {getRecentActivity().map((activity) => (
+              <div key={activity.id} className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-[#d47c08] bg-opacity-10 rounded-full flex items-center justify-center">
                   <Activity className="w-4 h-4 text-[#d47c08]" />
                 </div>
                 <div className="flex-1">
                   <p className="text-sm text-[#292929] dark:text-white">
                     <span className="font-medium">{activity.user}</span> {activity.action}
+                    {activity.item && (
+                      <span className="text-gray-500 dark:text-gray-400"> - {activity.item.title}</span>
+                    )}
                   </p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">{activity.time}</p>
                 </div>
@@ -96,7 +99,7 @@ const Dashboard: React.FC = () => {
           <h2 className="text-xl font-semibold text-[#292929] dark:text-white mb-4">Quick Actions</h2>
           <div className="space-y-3">
             {[
-              { title: 'Review Pending Items', count: 12, color: 'text-[#d47c08]' },
+              { title: 'Manage All Listings', count: items.length, color: 'text-[#d47c08]' },
               { title: 'Flagged Content', count: 3, color: 'text-red-500' },
               { title: 'User Reports', count: 2, color: 'text-yellow-500' },
               { title: 'System Alerts', count: 1, color: 'text-blue-500' }

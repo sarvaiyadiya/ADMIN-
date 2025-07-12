@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Search, Filter, Eye, Trash2 } from 'lucide-react';
-import { mockItems } from '../data/mockData';
+import { Search, Filter, Eye, Trash2, Check, X } from 'lucide-react';
+import { useItems } from '../contexts/ItemsContext';
 import { Item } from '../types';
 import ItemModal from './ItemModal';
 
 const AllListings: React.FC = () => {
-  const [items, setItems] = useState(mockItems);
+  const { items, updateItemStatus, deleteItem } = useItems();
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -21,7 +21,11 @@ const AllListings: React.FC = () => {
   );
 
   const handleDelete = (id: string) => {
-    setItems(items.filter(item => item.id !== id));
+    deleteItem(id);
+  };
+
+  const handleStatusUpdate = (id: string, status: 'pending' | 'approved' | 'rejected') => {
+    updateItemStatus(id, status);
   };
 
   const getStatusColor = (status: string) => {
@@ -148,6 +152,24 @@ const AllListings: React.FC = () => {
                       >
                         <Eye className="w-4 h-4" />
                       </button>
+                      {item.status === 'pending' && (
+                        <>
+                          <button
+                            onClick={() => handleStatusUpdate(item.id, 'approved')}
+                            className="p-2 text-green-600 hover:text-green-700 rounded-lg hover:bg-green-50 dark:hover:bg-green-900/20"
+                            title="Approve"
+                          >
+                            <Check className="w-4 h-4" />
+                          </button>
+                          <button
+                            onClick={() => handleStatusUpdate(item.id, 'rejected')}
+                            className="p-2 text-red-600 hover:text-red-700 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20"
+                            title="Reject"
+                          >
+                            <X className="w-4 h-4" />
+                          </button>
+                        </>
+                      )}
                       <button
                         onClick={() => handleDelete(item.id)}
                         className="p-2 text-red-600 hover:text-red-700 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20"

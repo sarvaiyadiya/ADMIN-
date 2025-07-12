@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Bell, Shield, Database, Globe, Eye, EyeOff, Check, X } from 'lucide-react';
+import { Bell, Shield, Globe, Eye, EyeOff, Check, X } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 
 const Settings: React.FC = () => {
@@ -206,23 +206,7 @@ const Settings: React.FC = () => {
           </div>
         </div>
 
-        {/* Data Management */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-          <div className="flex items-center space-x-3 mb-4">
-            <Database className="w-5 h-5 text-[#d47c08]" />
-            <h2 className="text-lg font-semibold text-[#292929] dark:text-white">Data Management</h2>
-          </div>
-          <div className="space-y-4">
-            <button className="w-full text-left p-4 rounded-lg border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
-              <p className="font-medium text-[#292929] dark:text-white">Export Data</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Download platform data for backup</p>
-            </button>
-            <button className="w-full text-left p-4 rounded-lg border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
-              <p className="font-medium text-[#292929] dark:text-white">Data Retention</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Configure data retention policies</p>
-            </button>
-          </div>
-        </div>
+
       </div>
 
       {/* Password Change Modal */}

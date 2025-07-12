@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
+import { ItemsProvider } from './contexts/ItemsContext';
 import Login from './components/Login';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Dashboard from './components/Dashboard';
-import PendingItems from './components/PendingItems';
 import AllListings from './components/AllListings';
 import Users from './components/Users';
 import Settings from './components/Settings';
@@ -23,8 +23,6 @@ const AdminPanel: React.FC = () => {
     switch (activeTab) {
       case 'dashboard':
         return <Dashboard />;
-      case 'pending':
-        return <PendingItems />;
       case 'listings':
         return <AllListings />;
       case 'users':
@@ -59,7 +57,9 @@ const App: React.FC = () => {
   return (
     <ThemeProvider>
       <AuthProvider>
-        <AdminPanel />
+        <ItemsProvider>
+          <AdminPanel />
+        </ItemsProvider>
       </AuthProvider>
     </ThemeProvider>
   );
