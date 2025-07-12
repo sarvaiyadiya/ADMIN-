@@ -42,9 +42,9 @@ export const mockUsers: User[] = [
     swapsCompleted: 5
   },
   {
-    id: '4',
-    name: 'Ayush Mittal',
-    email: 'ayush.mittal@email.com',
+    id: '5',
+    name: 'Aryan Singh',
+    email: 'aryan.singh@email.com',
     avatar: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?w=150',
     joinDate: '2024-04-05',
     status: 'active',
@@ -124,7 +124,7 @@ export const mockItems: Item[] = [
     size: 'L',
     condition: 'Excellent',
     images: ['https://images.pexels.com/photos/1082529/pexels-photo-1082529.jpeg?w=300'],
-    user: mockUsers[0], // Diya Sarvaiya
+    user: mockUsers[5], // Diya Sarvaiya
     status: 'approved',
     dateSubmitted: '2024-12-11',
     tags: ['denim', 'classic', 'versatile']
